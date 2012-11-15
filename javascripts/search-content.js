@@ -12,14 +12,14 @@ function init() {
        //$("#notHelpful").on("click", postQuestion);
       gadgets.window.adjustHeight();
 }
-
+$(document).ready(function(){
  $("#notHelpful").click(postQuestion(){
 	$("#search-info").hide();
 //	$(".content").hide();
 //	$("#postQuestionForm").show();
 //	gadgets.window.adjustHeight();
 });
-
+});
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
                 var curRowId = $(this).attr("id");
