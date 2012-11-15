@@ -233,7 +233,7 @@ function expandDiscussion(id){
 					discussionMessage +=rootmessage;
 					discussionMessage +=correctanswer;
 					discussionMessage +=helpfulanswer;
-					discussionMessage += '<div class="pq"></div>";
+					discussionMessage +=feedbackText;
 					console.log("Html Content:: "+discussionMessage);
 					$(".content").show();
 					$(".content").html(discussionMessage);
@@ -309,7 +309,7 @@ function expandDocument(id){
 					documentdata +='</div>';					
 					documentdata +='<div class="answerborder">';
 					documentdata +='<span class="root">'+response.data.content.text +'</span></div>';				
-          documentdata += feedbackText;                         
+                                        documentdata += feedbackText;                         
 				  }
 			    }
 			    $(".content").show();
@@ -797,7 +797,7 @@ function search() {
 			//all +="<br>"+post;
 			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
 
-			//feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+			feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
 			// feedbackText+= '<button id="helpful">Helpful</button>';
 
 			console.log("discussion::"+discussion);
