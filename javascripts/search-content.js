@@ -8,18 +8,17 @@ var feedbackText = "";
 // On-view-load initialization
 function init() {
       $("#search").click(search);
-     // $("#notHelpful").click(postQuestion);
-       $("#notHelpful").on("click", postQuestion);
+      //$("#notHelpful").click(postQuestion);
+       //$("#notHelpful").on("click", postQuestion);
       gadgets.window.adjustHeight();
 }
 
-
-function postQuestion () {
+ $("#notHelpful").click( postQuestion () {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
 	gadgets.window.adjustHeight();
-}
+});
 
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
