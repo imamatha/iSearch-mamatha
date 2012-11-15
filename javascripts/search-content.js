@@ -233,7 +233,7 @@ function expandDiscussion(id){
 					discussionMessage +=rootmessage;
 					discussionMessage +=correctanswer;
 					discussionMessage +=helpfulanswer;
-					discussionMessage += feedbackText; 
+					discussionMessage += '<div class="pq"></div>";
 					console.log("Html Content:: "+discussionMessage);
 					$(".content").show();
 					$(".content").html(discussionMessage);
