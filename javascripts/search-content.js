@@ -8,7 +8,7 @@ var feedbackText = "";
 // On-view-load initialization
 function init() {
       $("#search").click(search);
-			$("#notHelpful").click(postQuestion);
+		//	$("#notHelpful").click(postQuestion);
       gadgets.window.adjustHeight();
 }
 
@@ -105,6 +105,8 @@ $(document).ready(function() {
  //function for tabs   
  $(function() {
          $( "#tabs" ).tabs();
+         $("#notHelpful").click(postQuestion);
+         
         
  });
 
