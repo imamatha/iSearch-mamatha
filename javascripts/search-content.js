@@ -8,7 +8,8 @@ var feedbackText = "";
 // On-view-load initialization
 function init() {
       $("#search").click(search);
-		//	$("#notHelpful").click(postQuestion);
+     // $("#notHelpful").click(postQuestion);
+       $("#notHelpful").on("click", postQuestion);
       gadgets.window.adjustHeight();
 }
 
@@ -796,7 +797,7 @@ function search() {
 			//all +="<br>"+post;
 			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
 
-		//	feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+			feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
 			// feedbackText+= '<button id="helpful">Helpful</button>';
 
 			console.log("discussion::"+discussion);
