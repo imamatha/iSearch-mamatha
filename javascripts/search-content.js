@@ -105,10 +105,12 @@ $(document).ready(function() {
  //function for tabs   
  $(function() {
          $( "#tabs" ).tabs();
-         $("#notHelpful").click(postQuestion);
-         
+         $("#notHelpful").click(function(){
+        alert('clicked!');
+    });       
         
  });
+ 
 
 //function for date format
  function monthConvert(d){
