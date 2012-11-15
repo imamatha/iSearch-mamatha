@@ -21,11 +21,11 @@ $(".notHelpful").live('click', function() {
 });
 
 
-//$("#cancel").live('click',function(){
-//	$("#search-info").show();
-//	$(".content").show();
+$(".cancel").live('click',function(){
+	$("#search-info").show();
+	$(".content").show();
 
-//});
+});
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
                 var curRowId = $(this).attr("id");
