@@ -14,9 +14,10 @@ function init() {
 
 
 function postQuestion () {
-	$('#search-info').hide();
-	$('.content').hide();
-	$('#postQuestionForm').show();
+	$("#search-info").hide();
+	$(".content").hide();
+	$("#postQuestionForm").show();
+	gadgets.window.adjustHeight();
 }
 
 //onhover event of expand icon
