@@ -13,7 +13,7 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
- $("#notHelpful").click( postQuestion () {
+ $("#notHelpful").click(postQuestion(){
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
