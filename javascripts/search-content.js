@@ -97,12 +97,12 @@ $(document).ready(function() {
     });
     
     
-     $("#notHelpful").click(postQuestion(){
-	$("#search-info").hide();
+     $("#notHelpful").click(postQuestion() {
+	$("#search-info").hide();});
 //	$(".content").hide();
 //	$("#postQuestionForm").show();
 //	gadgets.window.adjustHeight();
-});
+
 
 });
  //function for tabs   
