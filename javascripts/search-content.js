@@ -97,7 +97,7 @@ $(document).ready(function() {
     });
     
     
-     $("#notHelpful").click(postQuestion() {
+     $("#notHelpful").click(function(e) {
 	$("#search-info").hide();});
 //	$(".content").hide();
 //	$("#postQuestionForm").show();
