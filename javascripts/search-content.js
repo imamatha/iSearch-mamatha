@@ -15,9 +15,9 @@ function init() {
 
  $("#notHelpful").click(postQuestion(){
 	$("#search-info").hide();
-	$(".content").hide();
-	$("#postQuestionForm").show();
-	gadgets.window.adjustHeight();
+//	$(".content").hide();
+//	$("#postQuestionForm").show();
+//	gadgets.window.adjustHeight();
 });
 
 //onhover event of expand icon
