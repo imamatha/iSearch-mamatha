@@ -13,6 +13,12 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
+$(".notHelpful").live('click', function() {
+	$("#search-info").hide();
+	$(".content").hide();
+	$("#postQuestionForm").show();
+
+});
 
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
@@ -92,18 +98,9 @@ $("span.image-button").live('mouseover', function () {
 $(document).ready(function() {
 
     $('ul.tablist li').click(function(e) {
-		$('.firstdiv').css('background-color', '#FFFFFF');
-        $(".content").hide();
+    $('.firstdiv').css('background-color', '#FFFFFF');
+    $(".content").hide();
     });
-    
-    
-     $("#notHelpful").click(function(e) {
-	$("#search-info").hide();});
-//	$(".content").hide();
-//	$("#postQuestionForm").show();
-//	gadgets.window.adjustHeight();
-
-
 });
  //function for tabs   
  $(function() {
@@ -799,7 +796,7 @@ function search() {
 			//all +="<br>"+post;
 			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
 
-			feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+			feedbackText = '&nbsp;&nbsp;&nbsp;<button class="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
 			// feedbackText+= '<button id="helpful">Helpful</button>';
 
 			console.log("discussion::"+discussion);
