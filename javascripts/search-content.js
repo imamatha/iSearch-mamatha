@@ -17,6 +17,7 @@ $(".notHelpful").live('click', function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
+	$("#query").val();
 
 });
 
