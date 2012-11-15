@@ -15,7 +15,7 @@ function init() {
 
 function postQuestion () {
 	$('#search-info').hide();
-	$('#content').hide();
+	$('.content').hide();
 	$('#postQuestionForm').show();
 }
 
