@@ -111,9 +111,6 @@ $(document).ready(function() {
  //function for tabs   
  $(function() {
          $( "#tabs" ).tabs();
-         $("#notHelpful").click(function(){
-        alert('clicked!');
-    });       
         
  });
  
