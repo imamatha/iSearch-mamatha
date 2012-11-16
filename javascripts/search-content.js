@@ -30,6 +30,12 @@ $(".cancel").live('click',function(){
 	$(".content").show();
 
 });
+$(document).ready(function() {
+
+    $('.post').click(function(e) {
+  	alert("Hi i'm in post");
+    });
+});
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
                 var curRowId = $(this).attr("id");
