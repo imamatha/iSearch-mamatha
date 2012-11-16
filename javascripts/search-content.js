@@ -44,16 +44,39 @@ $(document).ready(function() {
 });
 
 function createDiscussion() {
-	var html=$("#desc").val();
-	var subject=$("#subject").val();
+	
       
   current = {
     html : html,
     subject : subject
   };
   console.log("createDiscussion() = " + JSON.stringify(current));
-  //var discussion = {subject: 'my subject', html: 'my content'} 
-  //var request = group.discussions.create(discussion); 
+  osapi.jive.core.groups.get({
+			//userId : "@me",
+			id : groupID
+		}).execute(function (response) {
+		if (response.error) {
+			alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
+		}
+		else {
+			var targetGroup = response.data;
+			var messageTitle=$("#subject").val();
+			var messageHTML=$("#desc").val();
+			
+			var discussion = {subject: messageTitle, html: messageHTML};
+			var request = targetGroup.discussions.create(discussion);
+			request.execute(function(response) {
+				if (response.error) {
+					console.log(response.error);
+				}
+				else {
+					console.log ("Discussion created successfully");
+					
+				}
+			});
+		}
+	});
+  
 }
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
