@@ -71,8 +71,10 @@ function createDiscussion() {
 				}
 				else {
 					console.log ("Discussion created successfully");
-					$("#postQuestionForm").hide();
-					$("#PostMsg").show();
+					//$("#postQuestionForm").hide();
+					//$("#PostMsg").show();
+					$("#postQuestionForm").css("display", "none");
+					$("#PostMsg").css("display", "block");
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
 					  window.location.href = redirectDiscussion;
