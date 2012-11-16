@@ -46,12 +46,7 @@ $(document).ready(function() {
 function createDiscussion() {
 	var groupID=1618;
       
-  current = {
-    html : html,
-    subject : subject
-  };
-  console.log("createDiscussion() = " + JSON.stringify(current));
-  osapi.jive.core.groups.get({
+   osapi.jive.core.groups.get({
 			userId : "@me",
 			id : groupID
 		}).execute(function (response) {
@@ -63,7 +58,7 @@ function createDiscussion() {
 			var messageTitle=$("#subject").val();
 			var messageHTML=$("#desc").val();
 			
-			var discussion = {subject: messageTitle, html: messageHTML};
+			var discussion = {subject: messageTitle, html: messageHTML, question:true};
 			var request = targetGroup.discussions.create(discussion);
 			request.execute(function(response) {
 				if (response.error) {
