@@ -25,14 +25,14 @@ $(".notHelpful").live('click', function() {
       $("#desc").val(value);
 });
 
-$(document).ready(function() {
-//$(".cancel").live('click',function(){
-$(".cancel").click(function(){
+
+$(".cancel").live('click',function(){
+//$(".cancel").click(function(){
 	$("#search-info").show();
 	$(".content").show();
 
 });
-});
+//});
 
 $(document).ready(function() {
 
