@@ -17,7 +17,8 @@ $(".notHelpful").live('click', function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
-        subject : $("#query").val(); 
+        var value = $("#query").val();
+      $("#subject").val(value);
 
 });
 
