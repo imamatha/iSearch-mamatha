@@ -44,12 +44,16 @@ $(document).ready(function() {
 });
 
 function createDiscussion() {
+	var html=$("#desc").val();
+	var subject=$("#subject").val();
+      
   current = {
-    html : "",
-    subject : ""
+    html : html,
+    subject : subject
   };
   console.log("createDiscussion() = " + JSON.stringify(current));
-  
+  //var discussion = {subject: 'my subject', html: 'my content'} 
+  //var request = group.discussions.create(discussion); 
 }
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
