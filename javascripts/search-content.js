@@ -58,6 +58,8 @@ function createDiscussion() {
 			var targetGroup = response.data;
 			var messageTitle=$("#subject").val();
 			var messageHTML=$("#desc").val();
+			var mini;
+
 			
 			var discussion = {subject: messageTitle, html: messageHTML, question:true};
 			var request = targetGroup.discussions.create(discussion);
