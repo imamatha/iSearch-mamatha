@@ -18,8 +18,9 @@ $(".notHelpful").live('click', function() {
 	$(".content").hide();
 	$("#postQuestionForm").show();
         var value = $("#query").val();
-        console.log("query string:"+value);
+        //console.log("query string:"+value);
       $("#subject").val(value);
+      $("#desc").val(value);
 
 });
 
