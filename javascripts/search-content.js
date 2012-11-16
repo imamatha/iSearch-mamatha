@@ -70,7 +70,7 @@ function createDiscussion() {
 					//$("#postQuestionForm").hide();
 					//$("#PostMsg").show();
 					$("#postQuestionForm").css("display", "none");
-					//$("#PostMsg").css("display", "block");
+					$("#PostMsg").css("display", "block");
 					mini.createTimerMessage("#PostMsg");
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
