@@ -33,7 +33,20 @@ $(".cancel").live('click',function(){
 $(document).ready(function() {
 
     $('.post').click(function(e) {
-  	alert("Hi i'm in post");
+  	osapi.groups.get({ 
+  		userId : "@me", 
+  		groupId : "accenturetest", 
+  	}).execute(function (response) { 
+  		if (response.error) { 
+  			alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
+  			} 
+  		else { 
+  			var groups = response.list; console.log("Retrieved " + groups.length + " groups"); 
+  			
+  		} 
+  		
+  	});
+  	
     });
 });
 //onhover event of expand icon
