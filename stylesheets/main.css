@@ -38,13 +38,27 @@
 
  border:1px solid black;
  background-color: #F2F2F2;
- width:30%;
+ width:50%;
  margin-left:auto;
  margin-right:auto;
  -webkit-border-radius:25px;
  -moz-border-radius: 25px;
   border-radius:25px;
  
+ }
+ .post
+ {
+  background-color: #A0A0A0;
+ -webkit-border-radius:25px;
+ -moz-border-radius: 25px;
+  border-radius:25px;
+ }
+ .cancel
+ {
+ background-color: #A0A0A0;
+ -webkit-border-radius:25px;
+ -moz-border-radius: 25px;
+  border-radius:25px;
  }
 
 /* Image positions*/
