@@ -72,6 +72,13 @@
 {
  background-color: #F2F2F2; 
 }
+#subject
+{
+ background-color: #B0C4DE; 
+}
+#desc{
+ background-color: #B0C4DE; 
+}
 /* Image positions*/
 .jive-icon-med {
      background-image: url('../images/jive-icon-sprites-med.png');
