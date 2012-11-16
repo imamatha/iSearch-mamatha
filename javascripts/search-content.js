@@ -24,7 +24,6 @@ $(".notHelpful").live('click', function() {
       $("#desc").val(value);
 
 });
-});
 
 $(".cancel").live('click',function(){
 	$("#search-info").show();
