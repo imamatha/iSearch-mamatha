@@ -773,8 +773,8 @@ function search() {
 							document +='<div class="root1">'; 
                     		document +='<ul>';
 							document +='<li>Created by <a class="nopad" href=https://apps-onprem.jivesoftware.com/people/'+username+'>'+author+'</a></li>';
-							document +='<li>Date:'+newDate+'</li>';                  
-                    		document +='<li>Replies:'+replyCount+'</li>';
+							document +='&nbsp;&nbsp<li>Date:'+newDate+'</li>';                  
+                    		document +='&nbsp;&nbsp<li>Replies:'+replyCount+'</li>';
 							document +='</ul>';
                     		document +='</div>';
 					
@@ -824,8 +824,8 @@ function search() {
 							post +='<div class="root1">'; 
 							post +='<ul>';
 							post +='<li>Created by <a class="nopad" href=https://apps-onprem.jivesoftware.com/people/'+username+'>'+author+'</a></li>';
-							post +='<li>Date:'+newDate+'</li>';                  
-							post +='<li>Replies:'+replyCount+'</li>'; 
+							post +='&nbsp;&nbsp<li>Date:'+newDate+'</li>';                  
+							post +='&nbsp;&nbsp<li>Replies:'+replyCount+'</li>'; 
 							post +='</ul>';
 							post +='</div>';
 					
