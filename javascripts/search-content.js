@@ -13,8 +13,9 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
-$(".notHelpful").live('click', function() {
-	
+//$(".notHelpful").live('click', function() {
+$(document).ready(function() {
+	$(".notHelpful").click(function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
@@ -22,7 +23,7 @@ $(".notHelpful").live('click', function() {
         //console.log("query string:"+value);
       $("#subject").val(value);
       $("#desc").val(value);
-
+});
 });
 
 $(".cancel").live('click',function(){
@@ -437,6 +438,7 @@ function search() {
 	$(".content").hide();
     gadgets.window.adjustHeight();
 	var html = "";
+	var myGroups ="";
 //	osapi.groups.get({ 
   //		userId : "@me", 
   	//	groupId : "@self", 
@@ -466,14 +468,15 @@ function search() {
                                                 });
                                                 // Populate the list of groups in the UI
                                                 $(myGroups).each(function(index, group) {
-                                                  var html = '<option class="group-item" value = "'+group.id+'"data-groupId="' + group.id + '">';
-                                                  html += group.title;
-                                                  html += "</option>";
+                                                  var Grouphtml = '<option class="group-item" value = "'+group.id+'"data-groupId="' + group.id + '">';
+                                                  Grouphtml += group.title;
+                                                  Grouphtml += "</option>";
+                                                  console.log("groups::"+Grouphtml);
                                                   //alert("my groups");
-                                                  $("#discussGroup").append(html);
+                                                  //$("#discussGroup").append(html);
                                                 });
-                                                $("#fetching").hide();
-                                                $("#groups").show();
+                                               // $("#fetching").hide();
+                                               // $("#groups").show();
                                                 //gadgets.window.adjustHeight();
                                   }
                                 });
