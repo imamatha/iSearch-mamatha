@@ -44,7 +44,7 @@ $(document).ready(function() {
 });
 
 function createDiscussion() {
-	
+	var groupID=1618;
       
   current = {
     html : html,
@@ -52,7 +52,7 @@ function createDiscussion() {
   };
   console.log("createDiscussion() = " + JSON.stringify(current));
   osapi.jive.core.groups.get({
-			//userId : "@me",
+			userId : "@me",
 			id : groupID
 		}).execute(function (response) {
 		if (response.error) {
