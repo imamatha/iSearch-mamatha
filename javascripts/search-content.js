@@ -13,9 +13,8 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
-//$(".notHelpful").live('click', function() {
-$(document).ready(function() {
-$(".notHelpful").click(function(){	
+$(".notHelpful").live('click', function() {
+	
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
@@ -37,7 +36,7 @@ $(document).ready(function() {
     $('.post').click(function(e) {
   	osapi.groups.get({ 
   		userId : "@me", 
-  		groupId : "accenturetest", 
+  		groupId : "@accenturetest", 
   	}).execute(function (response) { 
   		if (response.error) { 
   			alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
