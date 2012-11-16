@@ -33,20 +33,7 @@ $(".cancel").live('click',function(){
 $(document).ready(function() {
 
     $('.post').click(function(e) {
-  	osapi.groups.get({ 
-  		userId : "@me", 
-  		groupId : "@accenturetest", 
-  	}).execute(function (response) { 
-  		if (response.error) { 
-  			alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
-  			} 
-  		else { 
-  			var groups = response.list; console.log("Retrieved " + groups.length + " groups"); 
-  			
-  		} 
-  		
-  	});
-  	
+  	  	
     });
 });
 //onhover event of expand icon
@@ -450,6 +437,22 @@ function search() {
 	$(".content").hide();
     gadgets.window.adjustHeight();
 	var html = "";
+	osapi.groups.get({ 
+  		userId : "@me", 
+  		groupId : "@self", 
+  	}).execute(function (response) { 
+  		if (response.error) { 
+  			alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
+  			} 
+  		else { 
+  			var groups = response.list; 
+  			console.log("groups::"+groups);
+  			console.log("Retrieved " + groups.length + " groups"); 
+  			 
+  			
+  		} 
+  		
+  	});
     var params = {
         //limit : $("#limit").val(),
         query : $("#query").val(),
@@ -822,7 +825,7 @@ function search() {
 			//all +="<br>"+post;
 			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
 
-			feedbackText = '&nbsp;&nbsp;&nbsp;<button class="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+			feedbackText = '&nbsp;&nbsp;&nbsp;<button class="notHelpful" type="button">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
 			// feedbackText+= '<button id="helpful">Helpful</button>';
 
 			console.log("discussion::"+discussion);
