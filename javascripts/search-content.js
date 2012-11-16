@@ -30,6 +30,7 @@ $(".cancel").live('click',function(){
 //$(".cancel").click(function(){
 	$("#search-info").show();
 	$(".content").show();
+	$("#postQuestionForm").hide();
 
 });
 //});
