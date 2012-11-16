@@ -37,8 +37,10 @@
 #postQuestionForm{
 
  border:1px solid black;
- width:100%;
+ width:90%;
  background-color: #A0A0A0;
+ top:150px;
+ left:5px;
  
  }
 
