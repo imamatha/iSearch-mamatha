@@ -441,7 +441,7 @@ function search() {
 	$(".content").hide();
     gadgets.window.adjustHeight();
 	var html = "";
-	var myGroups ="";
+	var myGroups =[];
 //	osapi.groups.get({ 
   //		userId : "@me", 
   	//	groupId : "@self", 
