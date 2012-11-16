@@ -24,7 +24,7 @@ $(".notHelpful").live('click', function() {
       $("#subject").val(value);
       $("#desc").val(value);
 });
-});
+
 $(document).ready(function() {
 //$(".cancel").live('click',function(){
 $(".cancel").click(function(){
