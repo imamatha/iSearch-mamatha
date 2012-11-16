@@ -13,7 +13,9 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
-$(".notHelpful").live('click', function() {
+//$(".notHelpful").live('click', function() {
+$(document).ready(function() {
+$(".notHelpful").click(function(){	
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
@@ -23,7 +25,7 @@ $(".notHelpful").live('click', function() {
       $("#desc").val(value);
 
 });
-
+});
 
 $(".cancel").live('click',function(){
 	$("#search-info").show();
