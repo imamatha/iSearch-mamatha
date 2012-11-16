@@ -33,6 +33,15 @@
  overflow:auto;
  
 }
+
+#postQuestionForm{
+
+ border:1px solid black;
+ width:100%;
+ background-color: #A0A0A0;
+ 
+ }
+
 /* Image positions*/
 .jive-icon-med {
      background-image: url('../images/jive-icon-sprites-med.png');
