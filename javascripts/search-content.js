@@ -853,7 +853,7 @@ function search() {
 			//all +="<br>"+post;
 			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
 
-			feedbackText = '&nbsp;&nbsp;&nbsp;<div><button class="notHelpful" type="button">Post New Question</button></div>&nbsp;&nbsp;&nbsp;';
+			feedbackText = '&nbsp;&nbsp;&nbsp;<div><button class="notHelpful" type="button">Post New Discussion</button></div>&nbsp;&nbsp;&nbsp;';
 			// feedbackText+= '<button id="helpful">Helpful</button>';
 
 			console.log("discussion::"+discussion);
