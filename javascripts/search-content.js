@@ -71,7 +71,12 @@ function createDiscussion() {
 				}
 				else {
 					console.log ("Discussion created successfully");
-					
+					$("#postQuestionForm").hide();
+					$("#PostMsg").show();
+					var redirectDiscussion= response.data.resources.html.ref;
+					setTimeout(function() {
+					  window.location.href = redirectDiscussion;
+					}, 2000);					
 				}
 			});
 		}
