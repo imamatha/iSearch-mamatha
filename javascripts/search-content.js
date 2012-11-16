@@ -13,9 +13,9 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
-//$(".notHelpful").live('click', function() {
-$(document).ready(function() {
-	$(".notHelpful").click(function() {
+$(".notHelpful").live('click', function() {
+//$(document).ready(function() {
+//	$(".notHelpful").click(function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
@@ -25,12 +25,15 @@ $(document).ready(function() {
       $("#desc").val(value);
 });
 });
-
-$(".cancel").live('click',function(){
+$(document).ready(function() {
+//$(".cancel").live('click',function(){
+$(".cancel").click(function(){
 	$("#search-info").show();
 	$(".content").show();
 
 });
+});
+
 $(document).ready(function() {
 
     $('.post').click(function(e) {
