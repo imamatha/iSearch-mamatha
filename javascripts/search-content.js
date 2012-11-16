@@ -13,8 +13,7 @@ function init() {
       gadgets.window.adjustHeight();
 }
 
-//$(".notHelpful").live('click', function() {
-$(".notHelpful").click(function() {
+$(".notHelpful").live('click', function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
