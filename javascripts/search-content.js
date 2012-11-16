@@ -73,7 +73,6 @@ function createDiscussion() {
 					//$("#PostMsg").show();
 					$("#postQuestionForm").css("display", "none");
 					$("#PostMsg").css("display", "block");
-					mini.createTimerMessage("#PostMsg");
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
 					  window.location.href = redirectDiscussion;
