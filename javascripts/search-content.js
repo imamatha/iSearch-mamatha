@@ -37,9 +37,20 @@ $(".cancel").click(function(){
 $(document).ready(function() {
 
     $('.post').click(function(e) {
+		
+		createDiscussion();
   	  	
     });
 });
+
+function createDiscussion() {
+  current = {
+    html : "",
+    subject : ""
+  };
+  console.log("createDiscussion() = " + JSON.stringify(current));
+  
+}
 //onhover event of expand icon
 $("span.image-button").live('mouseover', function () {
                 var curRowId = $(this).attr("id");
@@ -442,47 +453,6 @@ function search() {
     gadgets.window.adjustHeight();
 	var html = "";
 	var myGroups =[];
-//	osapi.groups.get({ 
-  //		userId : "@me", 
-  	//	groupId : "@self", 
-  //	}).execute(function (response) { 
-  	//	if (response.error) { 
-  	//		alert("Error " + response.error.code + " reading groups. Error message was: " + response.error.message);
-  	//		} 
-  	//	else { 
-  		//	var groups = response.list; 
-  	//		console.log("groups::"+groups);
-  	//		console.log("Retrieved " + groups.length + " groups"); 
-  	//		 
-  			
-  	//	} 
-  		
-  //	});
-                  osapi.groups.get({
-                                  userId: "@me",
-                                  groupId: "@self"
-                                }).execute(function(response) {
-                                  if (response.error) {
-                                                //console.log("Error " + response.error.code + " retrieving all groups: " + response.error.message);
-                                  }
-                                  else {
-                                                $(response.list).each(function(index, group) {
-                                                 myGroups.push(group);
-                                                });
-                                                // Populate the list of groups in the UI
-                                                $(myGroups).each(function(index, group) {
-                                                  var Grouphtml = '<option class="group-item" value = "'+group.id+'"data-groupId="' + group.id + '">';
-                                                  Grouphtml += group.title;
-                                                  Grouphtml += "</option>";
-                                                  console.log("groups::"+Grouphtml);
-                                                  //alert("my groups");
-                                                  //$("#discussGroup").append(html);
-                                                });
-                                               // $("#fetching").hide();
-                                               // $("#groups").show();
-                                                //gadgets.window.adjustHeight();
-                                  }
-                                });
 
     var params = {
         //limit : $("#limit").val(),
