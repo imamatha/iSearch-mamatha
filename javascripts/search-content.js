@@ -73,8 +73,8 @@ function createDiscussion() {
 					//$("#postQuestionForm").hide();
 					//$("#PostMsg").show();
 					$("#postQuestionForm").css("display", "none");
-					//$("#PostMsg").css("display", "block");
-					 mini.createDismissibleMessage("succesfull");
+					$("#PostMsg").css("display", "block");
+					 //mini.createDismissibleMessage("succesfull");
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
 					  window.location.href = redirectDiscussion;
