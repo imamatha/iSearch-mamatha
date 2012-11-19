@@ -56,8 +56,8 @@
  -webkit-border-radius:15px;
  -moz-border-radius: 15px;
   border-radius:15px;
+  padding:2px;
   width:70%;
-  height:20%;
  }
  .post
  {
