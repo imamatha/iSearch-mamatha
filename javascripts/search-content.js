@@ -10,6 +10,7 @@ function init() {
       $("#search").click(search);
       //$("#notHelpful").click(postQuestion);
        //$("#notHelpful").on("click", postQuestion);
+	  mini = new gadgets.MiniMessage();
       gadgets.window.adjustHeight();
 }
 
@@ -72,7 +73,8 @@ function createDiscussion() {
 					//$("#postQuestionForm").hide();
 					//$("#PostMsg").show();
 					$("#postQuestionForm").css("display", "none");
-					$("#PostMsg").css("display", "block");
+					//$("#PostMsg").css("display", "block");
+					 mini.createDismissibleMessage("succesfull");
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
 					  window.location.href = redirectDiscussion;
