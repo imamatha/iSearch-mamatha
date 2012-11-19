@@ -52,10 +52,11 @@
  #PostMsg
  {
  border:1px solid black;
- background-color: #F2F2F2;
+ background-color: #A0A0A0;
  -webkit-border-radius:15px;
  -moz-border-radius: 15px;
   border-radius:15px;
+  width:50%;
  }
  .post
  {

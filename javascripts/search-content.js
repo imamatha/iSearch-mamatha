@@ -78,7 +78,7 @@ function createDiscussion() {
 					var redirectDiscussion= response.data.resources.html.ref;
 					setTimeout(function() {
 					  window.location.href = redirectDiscussion;
-					}, 2000);					
+					}, 3000);					
 				}
 			});
 		}
