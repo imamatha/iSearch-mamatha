@@ -68,7 +68,7 @@
  {
   background-color: #F2F2F2; 
  }
-.cancel:hover
+.cancel:focus
 {
  background-color: #F2F2F2; 
 }
