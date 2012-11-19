@@ -64,7 +64,7 @@
  -moz-border-radius: 15px;
   border-radius:15px;
  }
-  .post:hover
+  .post:focus
  {
   background-color: #F2F2F2; 
  }
