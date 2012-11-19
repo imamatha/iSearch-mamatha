@@ -80,11 +80,13 @@
 #subject
 {
  background-color:#F0F8FF; 
- height: 50px;
- width: 300px;
+ height: 25px;
+ width: 400px;
 }
 #desc{
- background-color: #F0F8FF; 
+ background-color: #F0F8FF;
+  height: 25px;
+ width: 400px;
 }
 /* Image positions*/
 .jive-icon-med {
