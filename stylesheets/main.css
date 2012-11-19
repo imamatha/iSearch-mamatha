@@ -53,6 +53,9 @@
  {
  border:1px solid black;
  background-color: #F2F2F2;
+ -webkit-border-radius:15px;
+ -moz-border-radius: 15px;
+  border-radius:15px;
  }
  .post
  {
@@ -60,9 +63,7 @@
   background-color: #A0A0A0;
  -webkit-border-radius:15px;
  -moz-border-radius: 15px;
-  border-radius:15px;
-  margin-left:
-  
+  border-radius:15px;  
  }
  .cancel
  {
@@ -72,7 +73,7 @@
  -moz-border-radius: 15px;
   border-radius:15px;
  }
-  .post:focus
+ .post:focus
  {
   background-color: #F2F2F2; 
  }
