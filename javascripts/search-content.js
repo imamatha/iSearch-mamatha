@@ -817,7 +817,7 @@ function search() {
 							post +='<div id="div_'+postId+'" class="firstdiv"> ';
 								post +='<div class="div_'+page+'" style="'+display_blog+'">';	
 							post +='<ul>';
-							post +='<span class="jive-icon-med jive-icon-blog"></span><li class="post" ><a href="'+url+'" target="_apps">'+subject+'</a></li>';
+							post +='<span class="jive-icon-med jive-icon-blog"></span><li><a href="'+url+'" target="_apps">'+subject+'</a></li>';
 							post +='</ul>';
 							post +='<ul>';
 							post +='<span class="jive-icon-med image-button" id="post-'+postId+'/'+blogId+'" ></span>';                            
