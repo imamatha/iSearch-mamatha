@@ -10,7 +10,7 @@ function init() {
       $("#search").click(search);
       //$("#notHelpful").click(postQuestion);
        //$("#notHelpful").on("click", postQuestion);
-	 var  mini = new gadgets.MiniMessage();
+	// var  mini = new gadgets.MiniMessage();
       gadgets.window.adjustHeight();
 }
 
