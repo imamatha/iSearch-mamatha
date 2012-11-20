@@ -56,7 +56,7 @@
  -webkit-border-radius:15px;
  -moz-border-radius: 15px;
   border-radius:15px;
-  padding:2px;
+  padding:10px;
   width:70%;
  }
  .post
@@ -75,11 +75,11 @@
  -moz-border-radius: 15px;
   border-radius:15px;
  }
- .post:focus
+ .post:hover
  {
   background-color: #F2F2F2; 
  }
-.cancel:focus
+.cancel:hover
 {
  background-color: #F2F2F2; 
 }
