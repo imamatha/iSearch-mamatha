@@ -20,21 +20,19 @@ $(".notHelpful").live('click', function() {
 	$("#search-info").hide();
 	$(".content").hide();
 	$("#postQuestionForm").show();
-        var value = $("#query").val();
-        //console.log("query string:"+value);
-      $("#subject").val(value);
-      $("#desc").val(value);
+    var value = $("#query").val();
+    //console.log("query string:"+value);
+    $("#subject").val(value);
+    $("#desc").val(value);
 });
 
 
 $(".cancel").live('click',function(){
-//$(".cancel").click(function(){
 	$("#search-info").show();
 	$(".content").show();
 	$("#postQuestionForm").hide();
 
 });
-//});
 
 $(document).ready(function() {
 
