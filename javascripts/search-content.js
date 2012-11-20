@@ -29,7 +29,7 @@ $(".notHelpful").live('click', function() {
 
 $(".cancel").live('click',function(){
 	$("#search-info").show();
-	$(".content").show();
+	$(".content").hide();
 	$("#postQuestionForm").hide();
 
 });
