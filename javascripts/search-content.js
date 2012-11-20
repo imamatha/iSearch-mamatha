@@ -712,7 +712,8 @@ function search() {
 								
 								discussion +='<div id="div_'+discussionID+'" class="firstdiv" >'; 
 								discussion +='<div class="div_'+page+'" style="'+display_discussion+'">';								
-								  discussion +='<ul>';			
+								discussion +='<ul>';
+								discussion +='<p>Total number of pages are '+totalpage+'</p>';						
 				                discussion +=discussionImage+'<li><a href="'+url+'" target="_apps">'+subject+'</a></li>';			
                                 discussion +='</ul>';
                                 discussion +='<ul>';
