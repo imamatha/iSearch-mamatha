@@ -2,6 +2,12 @@ var total_page_discussion =0;
 var total_page_document =0;
 var total_page_blog =0;
 var total_page_all =0;
+var getDiscussion="discussion";
+var getDocument="document";
+var getBlog="blog";
+var getAll="all";
+var lastIndex=0;
+var firstIndex=0;
 
 var feedbackText = "";
 
@@ -430,52 +436,99 @@ function expandBlog(blogId, blogpostId){
 	});
 
 }
-function showPage(page,type)
+function showPage(page,type,navigate)
 {
 $('.firstdiv').css('background-color', '#FFFFFF');
 $(".content").hide();
  //$(".maindiv").hide();
+ var pagecounter=0;
+  var selectedPage="";
+  var totalPage=0;
+ pagecounter=page;
+ console.log("page outside::"+pagecounter);
+ console.log("Navigate type:::"+navigate+ " page :::"+page+" type:::"+type);
+ var attlink="";
+ var getType="";
+ var firstIndex=0;
+ var lastIndex=0;
+ var naviNextCheck=false;
+ var naviPrevCheck=false;
 if(type=="discussion")
 {
-var totalPage=total_page_discussion;
+totalPage=total_page_discussion;
+getType="getDiscussion";
+lastIndex=total_page_discussion-1;
 }
 else if(type=="document")
 {
-var totalPage=total_page_document;
+totalPage=total_page_document;
+getType="getDocument";
 }
 else if(type=="blog")
 {
-var totalPage=total_page_blog;
+totalPage=total_page_blog;
+getType="getBlog";
 }
 else
 {
-var totalPage=total_page_all;
+totalPage=total_page_all;
+getType="getAll";
 }
+if(navigate=="next")
+ {
+pagecounter=pagecounter+1;
+if(pagecounter==totalPage)
+{
+$('a#'+type+'_pagingControls').removeAttr('href');
+naviNextCheck=true;
+}
+console.log("Page counter value:::"+pagecounter);
+ }else{
+pagecounter=pagecounter-1;
+if(pagecounter<=1)
+{
+$('a#'+type+'_pagingControls').removeAttr('href');
+naviPrevCheck=true;
+}
+console.log("Page counter value inside previous:::"+pagecounter);
+ }
 
- var selectedPage=".div_page_"+type+"_"+page;
+ console.log("Page counter value before class:::"+pagecounter);
+ selectedPage=".div_page_"+type+"_"+pagecounter;
  console.log("Inside show page:::"+selectedPage +"Total Page::"+totalPage);
  for (var i = 1; i <=totalPage; i++) {
-      if(i==page)
-	  {
-		console.log("Inside show if" +i);
-		$('.div_page_'+type+'_'+i).css('display', 'block');
-		//$(selectedPage).show();
-		//$(".maindiv").show();
-	  }
-	  else
-	  {
-		console.log("Inside hide else" +i);
-		$('.div_page_'+type+'_'+i).css('display', 'none');
-		 //$('.div_page_'+type+'_'+i).hide();
-	  }
+      if(i==pagecounter)
+{
+console.log("Inside show if" +i);
+$('.div_page_'+type+'_'+i).css('display', 'block');
+//$(selectedPage).show();
+//$(".maindiv").show();
+}
+else
+{
+console.log("Inside hide else" +i);
+$('.div_page_'+type+'_'+i).css('display', 'none');
+//$('.div_page_'+type+'_'+i).hide();
+}
     }
- 
-	
+var next=pagecounter;
+var prev=pagecounter;
+if(naviNextCheck)
+{
+attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+}
+else if(naviPrevCheck)
+{
+attlink='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+}
+else
+{
+attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 
-
-
-
+ //$('#'+type+'_pagingControls').html('<div><a href="#" onClick="'return showPage(pagecounter-1,type,\'previous\');"><span class="jive-icon-med jive-icon-previous-disabled"></span></a>Page:'+pagecounter+'/'+total_page_discussion+'<a href="#" onClick="'return showPage(pagecounter+1,type,\'next\');"><span class="jive-icon-med jive-icon-next"></span></a></div>' );
+$('#'+type+'_pagingControls').html(attlink);
+}
 // Perform a search and display the results
 function search() {
     
@@ -856,24 +909,79 @@ function search() {
 			//all +=discussion;
 			//all +="<br>"+document;
 			//all +="<br>"+post;
-			all +='<br><div class="pagingControls">Page:'+paginate_all+'</div>';
+	if(total_page_all==0)
+{
+paginate_all='<span > No records found</span>'
+}
+else if(total_page_all==1)
+{
+paginate_all='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+}
+else
+{
+paginate_all='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<a href="#" onClick="return showPage(1,\'all\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+}
 
-			feedbackText = '&nbsp;&nbsp;&nbsp;<div><button class="notHelpful" type="button">Post New Discussion</button></div>&nbsp;&nbsp;&nbsp;';
-			// feedbackText+= '<button id="helpful">Helpful</button>';
+all +='<br><div class="pagingControls" id="all_pagingControls">'+paginate_all+'</div>';
 
-			console.log("discussion::"+discussion);
-			console.log("discussion_count::"+total_page_discussion);
-			$("#tabs-1").html(all);
-			discussion +='<br><div class="pagingControls">Page:'+paginate_discussion+'</div>';
-			
-			$("#tabs-2").html(discussion);
-			document +='<br><div class="pagingControls">Page:'+paginate_document+'</div>';
-			console.log("document::"+document);
-			$("#tabs-3").html(document);
-			post +='<br><div class="pagingControls">Page:'+paginate_blog+'</div>';
-			$("#tabs-4").html(post);
+feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+// feedbackText+= '<button id="helpful">Helpful</button>';
+
+console.log("discussion::"+discussion);
+console.log("discussion_count::"+total_page_discussion);
+$("#tabs-1").html(all);
+if(total_page_discussion==0)
+{
+paginate_discussion='<span > No records found</span>'
+}
+else if(total_page_discussion==1)
+{
+paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+}
+else
+{
+lastIndex=total_page_discussion-1;
+paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+}
+
+discussion +='<br><div class="pagingControls" id="discussion_pagingControls">'+paginate_discussion+'</div>';
+
+$("#tabs-2").html(discussion);
+
+if(total_page_document==0)
+{
+paginate_document='<span > No records found</span>'
+}
+else if(total_page_document==1)
+{
+paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+}
+else
+{
+paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<a href="#" onClick="return showPage(1,\'document\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+}
+
+document +='<br><div class="pagingControls" id="document_pagingControls">'+paginate_document+'</div>';
+console.log("document::"+document);
+$("#tabs-3").html(document);
+
+if(total_page_blog==0)
+{
+paginate_blog='<span > No records found</span>'
+}
+else if(total_page_blog==1)
+{
+paginate_blog='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+}
+else
+{
+paginate_blog='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<a href="#" onClick="return showPage(1,\'blog\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+}
+
+post +='<br><div class="pagingControls">'+paginate_blog+'</div>';
+$("#tabs-4").html(post);
             $("#search-info").show();
-			gadgets.window.adjustHeight();
+gadgets.window.adjustHeight();
         }
     });
 }
