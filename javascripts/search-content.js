@@ -670,7 +670,7 @@ function search() {
 				
 					typeImage ='<span class="jive-icon-med jive-icon-document"></span>';
 					mainId="all_DOC-"+allId;
-				}else if(row.type=="post"){
+				}else (row.type=="post"){
 					var postDetailsId=row.resources.self.ref;
 					var blogSummaryId=row.blogSummary.resources.self.ref;
 					var blogId = (blogSummaryId.substring(blogSummaryId.lastIndexOf("/"))).substr(1);
