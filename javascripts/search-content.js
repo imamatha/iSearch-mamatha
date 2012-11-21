@@ -469,11 +469,13 @@ else if(type=="blog")
 {
 totalPage=total_page_blog;
 getType="getBlog";
+lastIndex=total_page_blog-1;
 }
 else
 {
 totalPage=total_page_all;
 getType="getAll";
+lastIndex=total_page_all-1;
 }
 if(navigate=="next")
  {
@@ -916,11 +918,12 @@ paginate_all='<span > No records found</span>'
 }
 else if(total_page_all==1)
 {
-paginate_all='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+paginate_all='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
 }
 else
 {
-paginate_all='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<a href="#" onClick="return showPage(1,\'all\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+lastIndex=total_page_all-1;
+paginate_all='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_all+'<a href="#" onClick="return showPage(1,\'all\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'all\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 
 all +='<br><div class="pagingControls" id="all_pagingControls">'+paginate_all+'</div>';
@@ -967,22 +970,24 @@ document +='<br><div class="pagingControls" id="document_pagingControls">'+pagin
 console.log("document::"+document);
 $("#tabs-3").html(document);
 
+
 if(total_page_blog==0)
 {
 paginate_blog='<span > No records found</span>'
 }
 else if(total_page_blog==1)
 {
-paginate_blog='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+paginate_blog='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
 }
 else
 {
-paginate_blog='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<a href="#" onClick="return showPage(1,\'blog\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+lastIndex=total_page_blog-1;
+paginate_blog='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<a href="#" onClick="return showPage(1,\'blog\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'blog\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 
 post +='<br><div class="pagingControls">'+paginate_blog+'</div>';
 $("#tabs-4").html(post);
-            $("#search-info").show();
+$("#search-info").show();
 gadgets.window.adjustHeight();
         }
     });
