@@ -546,7 +546,7 @@ function search() {
 	var myGroups =[];
 
     var params = {
-        //limit : $("#limit").val(),
+        limit : 50,
         query : $("#query").val(),
         //sort : $("#sort-type").val(),
        // sortOrder : $("#sort-order").val()
