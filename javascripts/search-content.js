@@ -467,9 +467,11 @@ lastIndex=total_page_document-1;
 }
 else if(type=="blog")
 {
+
 totalPage=total_page_blog;
 getType="getBlog";
 lastIndex=total_page_blog-1;
+console.log("blog else if"+lastIndex);
 }
 else
 {
@@ -482,15 +484,15 @@ if(navigate=="next")
 pagecounter=pagecounter+1;
 if(pagecounter==totalPage)
 {
-$('a#'+type+'_pagingControls').removeAttr('href');
+console.log("pagecounter==totalpage");
 naviNextCheck=true;
 }
 console.log("Page counter value:::"+pagecounter);
- }else{
+ }
+ else{
 pagecounter=pagecounter-1;
 if(pagecounter<=1)
 {
-$('a#'+type+'_pagingControls').removeAttr('href');
 naviPrevCheck=true;
 }
 console.log("Page counter value inside previous:::"+pagecounter);
