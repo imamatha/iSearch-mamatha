@@ -518,14 +518,17 @@ var next=pagecounter;
 var prev=pagecounter;
 if(naviNextCheck)
 {
+console.log("Iam in navinextcheck");
 attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
 }
 else if(naviPrevCheck)
 {
+console.log("Iam in naviprevcheck");
 attlink='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 else
 {
+console.log("Iam in else check");
 attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 
