@@ -463,6 +463,7 @@ else if(type=="document")
 {
 totalPage=total_page_document;
 getType="getDocument";
+lastIndex=total_page_document-1;
 }
 else if(type=="blog")
 {
