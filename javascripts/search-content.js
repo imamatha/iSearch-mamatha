@@ -954,11 +954,12 @@ paginate_document='<span > No records found</span>'
 }
 else if(total_page_document==1)
 {
-paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<span class="jive-icon-med jive-icon-next-disabled"></span>'
+paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
 }
 else
 {
-paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<a href="#" onClick="return showPage(1,\'document\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a>'
+lastIndex=total_page_document-1;
+paginate_document='<span class="jive-icon-med jive-icon-previous-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_document+'<a href="#" onClick="return showPage(1,\'document\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'document\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>''
 }
 
 document +='<br><div class="pagingControls" id="document_pagingControls">'+paginate_document+'</div>';
