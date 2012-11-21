@@ -931,7 +931,7 @@ paginate_all='<span class="jive-icon-med jive-icon-first-disabled"></span><span 
 
 all +='<br><div class="pagingControls" id="all_pagingControls">'+paginate_all+'</div>';
 
-feedbackText = '&nbsp;&nbsp;&nbsp;<button id="notHelpful">Not Helpful</button>&nbsp;&nbsp;&nbsp;';
+feedbackText = '&nbsp;&nbsp;&nbsp;<div><button class="notHelpful" type="button">Post New Discussion</button></div>&nbsp;&nbsp;&nbsp;';
 // feedbackText+= '<button id="helpful">Helpful</button>';
 
 console.log("discussion::"+discussion);
