@@ -102,36 +102,36 @@
 }
 
 
-li.First-disabled {
+.First-disabled {
  background-image: url('../images/First.png' );
  background-repeat:no-repeat;
 }
 
-li.First-enabled {
+.First-enabled {
  background-image: url('../images/FirstEnable.png' );
  background-repeat:no-repeat;
 }
-li.Previous-disabled {
+.Previous-disabled {
  background-image: url('../images/Previous.png' );
  background-repeat:no-repeat;
 }
-li.Previous-enabled {
+.Previous-enabled {
  background-image: url('../images/PreviousEnabled.png' );
  background-repeat:no-repeat;
 }
-li.Next-disabled {
+.Next-disabled {
  background-image: url('../images/Next.png' );
  background-repeat:no-repeat;
 }
-li.Next-enabled {
+.Next-enabled {
  background-image: url('../images/NextEnable.png' );
  background-repeat:no-repeat;
 }
-li.Last-disabled{
+.Last-disabled{
  background-image: url('../images/Last.png' );
  background-repeat:no-repeat;
 }
-li.Last-enabled {
+.Last-enabled {
  background-image: url('../images/LastEnable.png' );
  background-repeat:no-repeat;
 }
