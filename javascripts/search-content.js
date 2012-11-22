@@ -990,7 +990,7 @@ lastIndex=total_page_blog-1;
 paginate_blog='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_blog+'<a href="#" onClick="return showPage(1,\'blog\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'blog\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 }
 console.log("total no of blog:"+total_page_blog);
-post +='<br><div class="pagingControls">'+paginate_blog+'</div>';
+post +='<br><div class="pagingControls" id="blog_pagingControls" >'+paginate_blog+'</div>';
 $("#tabs-4").html(post);
 $("#search-info").show();
 gadgets.window.adjustHeight();
