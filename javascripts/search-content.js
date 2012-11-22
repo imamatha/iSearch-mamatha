@@ -960,7 +960,7 @@ else
 lastIndex=total_page_discussion-1;
 paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
 //paginate_discussion='<ul class="paginate-list"><li class="First-disabled"></li><li class="Previous-disabled"></li>Page:1/'+total_page_discussion+'<li class="Next-enabled"><a href="#" onClick="return showPage(1,\'discussion\',\'next\');"></a></li><li class="Last-enabled"><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"></a></li></ul>'
-paginate_discussion='<span class="First-disabled"></span><span class="Previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="Next-enabled"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="Last-enabled"></span></a>'
+//paginate_discussion='<span class="First-disabled"></span><span class="Previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="Next-enabled"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="Last-enabled"></span></a>'
 }
 
 discussion +='<br><div class="pagingControls" id="discussion_pagingControls">'+paginate_discussion+'</div>';
