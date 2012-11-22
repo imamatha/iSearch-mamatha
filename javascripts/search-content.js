@@ -521,17 +521,20 @@ var prev=pagecounter;
 if(naviNextCheck)
 {
 console.log("Iam in navinextcheck");
-attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+//attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><li class="First-enabled"></li></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><li class="Previous-enabled"></li></a>Page:'+pagecounter+'/'+totalPage+'<li class="Next-disabled"></li><li class="Last-disabled"></li>'
 }
 else if(naviPrevCheck)
 {
 console.log("Iam in naviprevcheck");
-attlink='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+//attlink='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+attlink='<li class="First-disabled"></li><li class="Previous-disabled"></li>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><li class="Next-enabled"></li></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><li class="Last-enabled"></li></a>'
 }
 else
 {
 console.log("Iam in else check");
-attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+//attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><span class="jive-icon-med jive-icon-first"></span></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><span class="jive-icon-med jive-icon-previous"></span></a>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+attlink='<a href="#" onClick="return showPage(2,'+getType+',\'previous\');"><li class="First-enabled"></li></a><a href="#" onClick="return showPage('+prev+','+getType+',\'previous\');"><li class="Previous-disabled"></li></a>Page:'+pagecounter+'/'+totalPage+'<a href="#" onClick="return showPage('+next+','+getType+',\'next\');"><li class="Next-enabled"></li></a><a href="#" onClick="return showPage('+lastIndex+','+getType+',\'next\');"><li class="Last-enabled"></li></a>'
 }
 
  //$('#'+type+'_pagingControls').html('<div><a href="#" onClick="'return showPage(pagecounter-1,type,\'previous\');"><span class="jive-icon-med jive-icon-previous-disabled"></span></a>Page:'+pagecounter+'/'+total_page_discussion+'<a href="#" onClick="'return showPage(pagecounter+1,type,\'next\');"><span class="jive-icon-med jive-icon-next"></span></a></div>' );
@@ -945,12 +948,14 @@ paginate_discussion='<span > No records found</span>'
 }
 else if(total_page_discussion==1)
 {
-paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+//paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<span class="jive-icon-med jive-icon-next-disabled"></span><span class="jive-icon-med jive-icon-last-disabled"></span>'
+paginate_discussion='<li class="First-disabled"></li><li class="Previous-disabled"></li>Page:1/'+total_page_discussion+'<li class="Next-disabled"></li><li class="Last-disabled"></span>'
 }
 else
 {
 lastIndex=total_page_discussion-1;
-paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+//paginate_discussion='<span class="jive-icon-med jive-icon-first-disabled"></span><span class="jive-icon-med jive-icon-previous-disabled"></span>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-next"></span></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><span class="jive-icon-med jive-icon-last"></span></a>'
+paginate_discussion='<li class="First-disabled"></li><li class="Previous-disabled"></li>Page:1/'+total_page_discussion+'<a href="#" onClick="return showPage(1,\'discussion\',\'next\');"><li class="Next-enabled"></li></a><a href="#" onClick="return showPage('+lastIndex+',\'discussion\',\'next\');"><li class="Last-enabled"></li></a>'
 }
 
 discussion +='<br><div class="pagingControls" id="discussion_pagingControls">'+paginate_discussion+'</div>';

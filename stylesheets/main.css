@@ -95,6 +95,44 @@
   height: 25px;
  width: 400px;
 }
+
+
+li.First-disabled {
+ background-image: url('../images/First.png' );
+ background-repeat:no-repeat;
+}
+
+li.First-enabled {
+ background-image: url('../images/FirstEnable.png' );
+ background-repeat:no-repeat;
+}
+li.Previous-disabled {
+ background-image: url('../images/Previous.png' );
+ background-repeat:no-repeat;
+}
+li.Previous-enabled {
+ background-image: url('../images/PreviousEnabled.png' );
+ background-repeat:no-repeat;
+}
+li.Next-disabled {
+ background-image: url('../images/Next.png' );
+ background-repeat:no-repeat;
+}
+li.Next-enabled {
+ background-image: url('../images/NextEnable.png' );
+ background-repeat:no-repeat;
+}
+li.Last-disabled{
+ background-image: url('../images/Last.png' );
+ background-repeat:no-repeat;
+}
+li.Last-enabled {
+ background-image: url('../images/LastEnable.png' );
+ background-repeat:no-repeat;
+}
+
+
+
 /* Image positions*/
 .jive-icon-med {
      background-image: url('../images/jive-icon-sprites-med.png');
