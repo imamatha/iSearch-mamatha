@@ -176,14 +176,13 @@
 }
 .jive-icon-previous {
      background-position: -80px -1360px;
-	 float:left;
 	
 
 }
 .jive-icon-previous-disabled {
 
     background-position: -96px -1360px;
-		 float:left;
+	
 	
 	
 	 
@@ -192,45 +191,36 @@
 .jive-icon-next {
 
      background-position: -48px -1360px;
-	 	 float:right;
-		  
+	 	 
 	
 	 
 }
 .jive-icon-next-disabled {
  
      background-position: -64px -1363px;
-	  float:right;
 	 
 	
 	 
 }
 .jive-icon-first {
      background-position: -152px -1360px;
-	  float:left;
-	
 	 
 	}
 .jive-icon-first-disabled {
 
      background-position: -196px -1360px;
-	  float:left;
-	  
-	 
 	
 }
 .jive-icon-last {
  
      background-position: -176px -1360px;
-	  float:right;
-
+	 
 	 
 	 
 }
 .jive-icon-last-disabled {
     
      background-position: -220px -1360px;
-	  float:right;
 	  
 	 
 }
