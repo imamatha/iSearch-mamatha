@@ -175,36 +175,68 @@
      background-position: -208px -16px;
 }
 .jive-icon-previous {
+     border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -80px -1360px;
 	 float:left;
 
 }
 .jive-icon-previous-disabled {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
     background-position: -96px -1360px;
 		 float:left;
 
 }
 .jive-icon-next {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -48px -1360px;
 	 	 float:right;
 }
 .jive-icon-next-disabled {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -64px -1363px;
 	  float:right;
 }
 .jive-icon-first {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -152px -1360px;
 	  float:left;
 }
 .jive-icon-first-disabled {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -196px -1360px;
 	  float:left;
 }
 .jive-icon-last {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -176px -1360px;
 	  float:right;
 }
 .jive-icon-last-disabled {
+ border:1px solid black;
+	 background-color:transparent;
+	 padding:2px;  
+	 width:50%;
      background-position: -220px -1360px;
 	  float:right;
 }
