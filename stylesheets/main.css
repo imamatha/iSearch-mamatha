@@ -177,14 +177,14 @@
 .jive-icon-previous {
      background-position: -80px -1360px;
 	 float:left;
-	  border:1px solid black;
+	  border:0px;
 
 }
 .jive-icon-previous-disabled {
 
     background-position: -96px -1360px;
 		 float:left;
-		  border:1px solid black;
+		  border:0px;
 	
 	 
 
@@ -193,7 +193,7 @@
 
      background-position: -48px -1360px;
 	 	 float:right;
-		  border:1px solid black;
+		  border:0px;
 	
 	 
 }
@@ -201,21 +201,21 @@
  
      background-position: -64px -1363px;
 	  float:right;
-	  border:1px solid black;
+	  border:0px;
 	
 	 
 }
 .jive-icon-first {
      background-position: -152px -1360px;
 	  float:left;
-	  border:1px solid black;
+	  border:0px;
 	 
 	}
 .jive-icon-first-disabled {
 
      background-position: -196px -1360px;
 	  float:left;
-	   border:1px solid black;
+	   border:0px;
 	 
 	
 }
@@ -223,7 +223,7 @@
  
      background-position: -176px -1360px;
 	  float:right;
-	  border:1px solid black;
+	  border:0 px;
 	 
 	 
 }
@@ -231,7 +231,7 @@
     
      background-position: -220px -1360px;
 	  float:right;
-	   border:1px solid black;
+	   border:0 px;
 	 
 }
 
