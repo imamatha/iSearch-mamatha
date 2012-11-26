@@ -557,7 +557,7 @@ function search() {
 	var myGroups =[];
 
     var params = {
-        limit : 100,
+        limit : 1000,
         query : $("#query").val(),
         //sort : $("#sort-type").val(),
        // sortOrder : $("#sort-order").val()
@@ -710,7 +710,7 @@ function search() {
 					}
 					var page="page_all_"+intial_all;
 				
-						if(row.type!="update"){
+						if(row.type=="document" ||row.type=="discussion"||row.type=="post"){
 							all +='<div id="alldiv_'+allId+'" class="firstdiv" >'; 
 							all +='<div class="div_'+page+'" style="'+display_all+'">';	
 							all +='<ul>';			
